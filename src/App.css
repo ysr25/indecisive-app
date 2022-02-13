@@ -1,38 +1,121 @@
-.App {
+html {
+  background-color: #e3e3e3;
+}
+
+.app {
+  padding: 10px;
+  font-family: 'Alegreya Sans', sans-serif;
+  font-size: 1.2em;
+  word-wrap: anywhere;
+}
+
+.cols {
+  display: flex;
+}
+
+.col {
+  margin: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .cols {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .col {
+    width: 50%;
+  }
+  .left {
+    max-width: 400px;
+  }
+}
+
+.left {
+  background-color: white;
+  height: fit-content;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #ce18ce;
+  padding-bottom: 16px;
+  font-family: 'Merienda One', cursive;
+  font-size: 2.5em;
+  line-height: 1em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.choose-section {
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.choose-result {
+  padding-top: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.delete-section {
+  padding: 10px;
+}
+
+.row {
+  padding-bottom: 7px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: stretch;
+}
+
+.item {
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+}
+
+input {
+  box-shadow: inset 0px -2px #ce18ce;
+}
+
+button, input {
+  border: 0;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button:focus, input:focus {
+  outline: 3px solid rgba(242, 155, 255, 0.5);
+}
+
+.right-button {
+  color: #ffffff;
+  background-color: #ce18ce;
+  width: 40px;
+  padding: 10px;
+}
+
+.toggle-button {
+  color: grey;
+  background-color: inherit;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 1px solid white;
+}
+
+.choose-button {
   color: white;
+  background-color: #ce18ce;
+  padding: 10px;
+  border: 2px solid #ce18ce;
+  box-shadow: inset 2px 2px white, inset -2px -2px white;
+  
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.delete-button {
+  color: red;
+  background-color: inherit;
+  padding: 3px;
+  text-decoration: underline;
 }
